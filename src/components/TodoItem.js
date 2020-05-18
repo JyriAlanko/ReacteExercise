@@ -32,9 +32,11 @@ getStyle = () => {
     }
 }
 
-
+// property types
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    markComplete: PropTypes.array.func.isRequired,
+    delTodo: PropTypes.array.func.isRequired,
 }
 
 const btnStyle = {

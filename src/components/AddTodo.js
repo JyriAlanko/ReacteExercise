@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class AddTodo extends Component {
 state= {
@@ -34,6 +35,14 @@ onChange = (e) => this.setState({ [e.target.name]:
             </form>
         )
     }
+}
+
+
+// property types
+AddTodo.propTypes = {
+    addTodo: PropTypes.func.isRequired,
+    markComplete: PropTypes.array.func.isRequired,
+    delTodo: PropTypes.array.func.isRequired,
 }
 
 export default AddTodo
